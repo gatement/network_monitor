@@ -1,4 +1,1 @@
--Tech: Erlang, Mysql
--Periodically ping target host
--Log data to Mysql
--Send reports to subscribers by email
+-Tech: Erlang, SNMP, rrdtool

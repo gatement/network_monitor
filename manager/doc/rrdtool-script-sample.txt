@@ -1,0 +1,32 @@
+rrdtool create ping_1350176908987.rrd --start N  --step 300 
+DS:loss:GAUGE:600:U:U  
+DS:time:GAUGE:600:U:U 
+RRA:AVERAGE:0.5:1:17856
+
+rrdtool create ping_1350176908232.rrd --start N  --step 300 
+DS:loss:GAUGE:600:U:U  
+DS:time:GAUGE:600:U:U 
+RRA:AVERAGE:0.5:1:17856
+
+
+rrdtool update ping_1350176908987.rrd --template loss:time 1350176908:10:233
+rrdtool update ping_1350176908232.rrd --template loss:time 1350176908:10:233
+
+
+rrdtool graph nmsbfhsdk32223.png --start "20121015 06:00" --end "20121015 06:27" 
+DEF:myloss_1350176908987=ping_1350176908987.rrd:loss:AVERAGE 
+DEF:myloss_1350176908232=ping_1350176908232.rrd:loss:AVERAGE
+LINE2:myloss_1350176908987#00FF00:"johnsonlau.net"
+LINE2:myloss_1350176908232#FF0000:"www.163.com"
+
+rrdtool graph dsfllljlj2l324l.png --start "20121015 06:00" --end "20121015 06:27"
+DEF:mytime_1350176908987=ping_1350176908987.rrd:time:AVERAGE 
+DEF:mytime_1350176908232=ping_1350176908232.rrd:time:AVERAGE
+LINE2:mytime_1350176908987#00FF00:"johnsonlau.net"
+LINE2:mytime_1350176908232#FF0000:"www.163.com"
+
+rrdtool graph ping_loss.png --start "20121015 06:00" --end "20121015 06:27" DEF:myloss1=ping_1350271073103000.rrd:loss:AVERAGE DEF:myloss2=ping_1350271073118000.rrd:loss:AVERAGE LINE2:myloss1#00FF00:"johnsonlau.net" LINE2:myloss2#FF0000:"www.163.com"
+
+rrdtool graph ping_time.png --start "20121015 06:00" --end "20121015 06:27" DEF:mytime1=ping_1350271073103000.rrd:time:AVERAGE DEF:mytime2=ping_1350271073118000.rrd:time:AVERAGE LINE2:mytime1#00FF00:"johnsonlau.net" LINE2:mytime2#FF0000:"www.163.com"
+
+

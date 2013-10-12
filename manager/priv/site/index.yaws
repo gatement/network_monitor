@@ -1,0 +1,10 @@
+<erl>
+	out(Arg) -> {html, layout_site:header(Arg)}.
+</erl>
+<div id="body">
+	<div id="subMenu"></div>
+	<div id="content"></div>
+</div>
+<erl>
+	out(Arg) -> {html, layout_site:footer(Arg)}.
+</erl>

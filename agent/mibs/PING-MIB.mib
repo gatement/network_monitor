@@ -1,0 +1,25 @@
+PING-MIB DEFINITIONS ::= BEGIN 
+          IMPORTS
+		          enterprises   FROM RFC1155-SMI
+                  DisplayString  FROM RFC1213-MIB
+                  OBJECT-TYPE    FROM RFC-1212
+                  ;
+		  
+          networkmonitor       OBJECT IDENTIFIER ::= { enterprises 10000 } -- {1,3,6,1,4,1,10000}
+		  
+          ping       OBJECT IDENTIFIER ::= { networkmonitor 1 }
+ 
+          ping-johnson-net OBJECT-TYPE
+              SYNTAX  DisplayString (SIZE (0..255))
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION "ping target: johnson.net"
+              ::= { ping 1 }
+ 
+          ping-163-com OBJECT-TYPE
+              SYNTAX  DisplayString (SIZE (0..255))
+              ACCESS  read-only
+              STATUS  mandatory
+              DESCRIPTION "ping target: 163.com"
+              ::= { ping 2 }
+END

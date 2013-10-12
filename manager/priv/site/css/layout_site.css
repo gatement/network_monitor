@@ -1,0 +1,77 @@
+#title
+{
+	margin-top: 0;
+	margin-bottom: 8px;
+	float: left;
+}
+#userInfo
+{
+	text-align: right;
+}
+#userInfo a
+{
+	text-decoration: underline;
+	color: Black;
+}
+#userInfo a:hover
+{
+	color: Green;
+}
+#topMenu
+{
+	clear: both;
+}
+#topMenu a
+{
+	text-decoration: none;
+	color: Black;
+}
+#topMenu a:hover
+{
+	color: Blue;
+}
+#subMenu
+{
+	float: left;
+	width: 150px;
+}
+#subMenu div
+{
+	margin-bottom: 6px;
+}
+#subMenu a
+{
+	text-decoration: none;
+	color: Black;
+}
+#subMenu a:hover
+{
+	color: Green;
+}
+#content
+{
+	float: left;
+	padding-left: 10px;
+	border-left: 1px solid #DDD;
+}
+#footer
+{
+	clear: both;
+}
+.navigationLocation
+{
+	margin-bottom: 20px;
+}
+input
+{
+	border: 1px solid #BBB;
+	padding: 5px;
+}
+input:focus
+{
+	background-color: Yellow;
+}
+.subSubMenu
+{
+	padding-left: 20px;
+}

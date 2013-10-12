@@ -1,0 +1,21 @@
+{'src/*', [{i, "include"}, {outdir, "ebin"}]}.
+
+{'src/helper/*', [{i, "include"}, {outdir, "ebin"}]}.
+
+{'src/sys_base/*', [{i, "include"}, {outdir, "ebin"}]}.
+{'src/sys_base/model/*', [{i, "include"}, {outdir, "ebin"}]}.
+{'src/sys_base/page/*', [{i, "include"}, {outdir, "ebin"}]}.
+
+{'src/sys_configuration/*', [{i, "include"}, {outdir, "ebin"}]}.
+{'src/sys_configuration/page/*', [{i, "include"}, {outdir, "ebin"}]}.
+
+{'src/sys_notification/*', [{i, "include"}, {outdir, "ebin"}]}.
+{'src/sys_notification/model/*', [{i, "include"}, {outdir, "ebin"}]}.
+{'src/sys_notification/page/*', [{i, "include"}, {outdir, "ebin"}]}.
+
+{'src/sys_statistic/*', [{i, "include"}, {outdir, "ebin"}]}.
+{'src/sys_statistic/page/*', [{i, "include"}, {outdir, "ebin"}]}.
+
+{'src/tests/*', [{i, "include"}, {outdir, "ebin"}]}.
+
+{'src/yaws_runmod/*', [{i, "include"}, {outdir, "ebin"}]}.
