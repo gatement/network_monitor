@@ -1,10 +1,17 @@
 -module(ping).
 -export([run/3]).
 
+%% ===================================================================
+%% API functions
+%% ===================================================================
 
 run(Host, Size, Count) ->
 	ping_start(Host, Size, Count).
 
+	
+%% ===================================================================
+%% Local Functions
+%% ===================================================================
 
 ping_start(Host, Size, Count) ->
 	PingStr = get_ping_cmd(Host, Size, Count),
@@ -16,7 +23,7 @@ ping_start(Host, Size, Count) ->
 	{LossPercentage, TimeAve} = get_result_value(Result),
 	io:format("========> ~p% loss~n", [LossPercentage]),
 	io:format("========> ~pms average time~n", [TimeAve]),
-	io:format("(~s)~n~n", [tools:datetime_string()]),
+	io:format("(~s)~n~n", [tools:datetime_string('yyyy-MM-dd hh:mm:ss')]),
 
 	{LossPercentage, TimeAve}.
 

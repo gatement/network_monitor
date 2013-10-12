@@ -1,2 +1,0 @@
-{'ping-johnson-net', {ping_instrumentation, ping_johnsonlau_net, []}}.
-{'ping-163-com', {ping_instrumentation, ping_163_com, []}}.

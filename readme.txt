@@ -1,1 +1,2 @@
--Tech: Erlang, SNMP, rrdtool
+-Tech: Erlang, rrdtool
+-Still under developing

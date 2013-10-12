@@ -92,7 +92,7 @@ get_datetime(Seconds, Datetime) ->
 	GregorianSeconds = calendar:datetime_to_gregorian_seconds(Datetime),
 	calendar:gregorian_seconds_to_datetime(GregorianSeconds + Seconds).
 		
-		
+
 %% ===================================================================
 %% Local Functions
 %% ===================================================================

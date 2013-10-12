@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Network Monitor</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<link type="text/css" rel="stylesheet" href="/css/site.css" />
+		<script type="text/javascript" src="/js/lib/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<div>
+				<h2 id="title">Network Monitor</h2>
+				<div id="userInfo">Welcome, 
+					<erl>
+						out(Arg) -> 
+							%UserId = (Arg#arg.state)#arg_state.user_id,
+							UserId="FakeUser",
+							{html, UserId}.
+					</erl>
+					,<a href="/user/logout">logout</a>
+				</div>
+			</div>
+			<div id="topMenu">
+				<a href="/statistic/ping">Statistic</a>
+				<erl>
+					out(Arg) ->
+						%AdminLinks = case model_user:is_admin(UserId) of
+						%		true -> " | <a href=\"/notification/setting\">Notification</a> | 
+						%					<a href=\"/configuration/agent\">Configuration</a>";
+						%		false -> ""
+						%end,
+						AdminLinks = " | <a href=\"/notification/setting\">Notification</a> | 
+										 <a href=\"/configuration/agent\">Configuration</a>",
+						{html, AdminLinks}.				
+				</erl>
+			</div>
+		</div>
+		<hr/>
